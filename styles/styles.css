@@ -297,6 +297,10 @@ span {
 }
 
 @media (max-width: 480px) {
+  body {
+    background: none;
+  }
+
   h2 {
     margin: 0;
   }
