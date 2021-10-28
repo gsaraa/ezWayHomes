@@ -4,13 +4,64 @@ body {
     font-size: 125%;
     line-height: 1.75;
     text-align: center;
+    background: url(../ezWayHomesLogo.png);
+    background-size: contain;
+    background-repeat: repeat;
+    // background-position:
 }
 
-h1 {
-    font-size: 5rem;
-    text-transform: capitalize;
+img {
+    max-width: 100%;
+    object-fit: cover;
 }
+
+// h1 {
+//     font-size: 5rem;
+//     text-transform: capitalize;
+// }
 
 h2 {
     font-size: 3rem;
+    text-transform: capitalize;
+    background-color: whitesmoke;
+    border-radius: 1rem;
+    margin: 45vh 30% 0 30%;
+    font-family: 'Raleway', sans-serif;
+    // font-size:130px;
+    color: #7c4905;
+    // position: absolute;
+    // top: 50%;
+    // left: 50%;
+    // transform: translate(-50%, -50%);
+    font-weight: 400;
+    letter-spacing: 8px;
+    text-shadow: 1px 0px 4px #7c4905, 2px 0px 4px #7c4905, 3px 0px 4px #7c4905, 2px 0px 3px #583302, 2px 3px 15px #583302, 2px 0px 15px, 5px 0px 125px, 20px 0vw 200px #583302,40px 0vw 200px #583302;
 }
+
+.flicker-slow{
+    animation: flicker 3s linear infinite;
+}
+
+// .flicker-fast{
+//     animation: flicker 1s linear infinite;
+// }
+
+@keyframes flicker {
+    0%, 19.999%, 22%, 62.999%, 64%, 64.999%, 70%, 100% {
+        //text-shadow: none;
+    opacity: .99;
+        
+    }
+    20%, 21.999%, 63%, 63.999%, 65%, 69.999% {
+        opacity: 0.4;
+    }
+}
+
+
+span {
+    display: block;
+}
+
+// .logo {
+//     width: 5rem;
+// }
