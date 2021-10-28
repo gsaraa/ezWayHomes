@@ -62,6 +62,19 @@ span {
     display: block;
 }
 
-// .logo {
-//     width: 5rem;
-// }
+.logo {
+    display: none;
+    width: 14rem;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+@media (max-width: 480px) {
+    h2 {
+        margin: 0;
+    }
+
+    .logo {
+        display: block;
+    }
+}
