@@ -238,10 +238,25 @@ html {
 body {
   font-size: 125%;
   line-height: 1.75;
-  text-align: center;
-  background: url(../ezWayHomesLogo.png);
-  background-size: contain;
-  background-repeat: repeat;
+  font-family: "Playfair Display", serif;
+  color: #592603;
+}
+
+.wrapper {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
 }
 
 img {
@@ -250,59 +265,59 @@ img {
      object-fit: cover;
 }
 
-h2 {
-  font-size: 3rem;
-  text-transform: capitalize;
-  background-color: whitesmoke;
-  border-radius: 1rem;
-  margin: 45vh 30% 0 30%;
-  font-family: "Raleway", sans-serif;
-  color: #7c4905;
-  font-weight: 400;
-  letter-spacing: 8px;
-  text-shadow: 1px 0px 4px #7c4905, 2px 0px 4px #7c4905, 3px 0px 4px #7c4905, 2px 0px 3px #583302, 2px 3px 15px #583302, 2px 0px 15px, 5px 0px 125px, 20px 0vw 200px #583302, 40px 0vw 200px #583302;
+header {
+  height: 100vh;
+  background-image: url(../background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right;
 }
 
-.flicker-slow {
-  -webkit-animation: flicker 3s linear infinite;
-          animation: flicker 3s linear infinite;
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-top: 3rem;
+  font-family: "Roboto", sans-serif;
 }
-
-@-webkit-keyframes flicker {
-  0%, 19.999%, 22%, 62.999%, 64%, 64.999%, 70%, 100% {
-    opacity: 0.99;
-  }
-  20%, 21.999%, 63%, 63.999%, 65%, 69.999% {
-    opacity: 0.4;
-  }
-}
-
-@keyframes flicker {
-  0%, 19.999%, 22%, 62.999%, 64%, 64.999%, 70%, 100% {
-    opacity: 0.99;
-  }
-  20%, 21.999%, 63%, 63.999%, 65%, 69.999% {
-    opacity: 0.4;
-  }
-}
-span {
-  display: block;
+nav a {
+  text-transform: uppercase;
+  color: #592603;
 }
 
 .logo {
-  display: none;
-  width: 14rem;
-  margin: 0 auto;
-  padding: 2rem 0;
+  width: 10rem;
+}
+
+.navLinks {
+  width: 70%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.about {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 3rem 0;
+}
+.about h2 {
+  width: 30%;
+}
+.about p {
+  width: 70%;
 }
 
 @media (max-width: 480px) {
   body {
     background: none;
-  }
-
-  h2 {
-    margin: 0;
   }
 
   .logo {
