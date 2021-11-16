@@ -12,6 +12,7 @@ body {
     // background-repeat: repeat;
     font-family: 'Playfair Display', serif;
     color: #592603;
+    padding: 0;
 }
 
 .wrapper {
@@ -38,7 +39,7 @@ img {
 
 header {
     height: 100vh;
-    background-image: url(../background.jpg);
+    background-image: url(../assets/background.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: right;
@@ -120,6 +121,45 @@ nav {
 
     p {
         width: 70%;
+    }
+}
+
+.gallerySec {
+    width: 60%;
+    margin: auto;
+    overflow: hidden;
+    // border: 5px solid black;
+    position: relative;
+
+    .gallery {
+        display: flex;
+        width: 100%;
+        height: 500px;
+        position: relative;
+
+        // img {
+        //     // width: 100%;
+        // }
+    }
+
+    .prevBtn {
+        position: absolute;
+        top: 50%;
+        z-index: 10;
+        left: 5%;
+        font-size: 1.5rem;
+        color: white;
+        cursor: pointer;
+    }
+
+    .nextBtn {
+        position: absolute;
+        top: 50%;
+        z-index: 10;
+        right: 5%;
+        font-size: 1.5rem;
+        color: white;
+        cursor: pointer;
     }
 }
 
