@@ -235,29 +235,22 @@ html {
   overflow: hidden;
 }
 
-body {
-  font-size: 125%;
-  line-height: 1.75;
-  font-family: "Playfair Display", serif;
-  color: #592603;
-  padding: 0;
-}
-
 .wrapper {
   width: 90%;
   margin: 0 auto;
   max-width: 1200px;
 }
 
-ul {
-  margin: 0;
+body {
+  font-size: 125%;
+  line-height: 1.75;
+  text-align: center;
+  background: url(../assets/ezWayHomesLogo.png);
+  background-size: contain;
+  background-repeat: repeat;
+  font-family: "Playfair Display", serif;
+  color: #592603;
   padding: 0;
-  list-style: none;
-}
-
-a {
-  display: inline-block;
-  text-decoration: none;
 }
 
 img {
@@ -266,92 +259,59 @@ img {
      object-fit: cover;
 }
 
-header {
-  height: 100vh;
-  background-image: url(../assets/background.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: right;
-}
-
-nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  padding-top: 3rem;
-  font-family: "Roboto", sans-serif;
-}
-nav a {
-  text-transform: uppercase;
-  color: #592603;
-}
-
 .logo {
-  width: 10rem;
+  display: none;
+  width: 14rem;
+  margin: 0 auto;
+  padding: 2rem 0;
 }
 
-.navLinks {
-  width: 70%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+h2 {
+  font-size: 3rem;
+  text-transform: capitalize;
+  background-color: whitesmoke;
+  border-radius: 1rem;
+  margin: 45vh 30% 0 30%;
+  font-family: "Raleway", sans-serif;
+  color: #7c4905;
+  font-weight: 400;
+  letter-spacing: 8px;
+  text-shadow: 1px 0px 4px #7c4905, 2px 0px 4px #7c4905, 3px 0px 4px #7c4905, 2px 0px 3px #583302, 2px 3px 15px #583302, 2px 0px 15px, 5px 0px 125px, 20px 0vw 200px #583302, 40px 0vw 200px #583302;
 }
 
-.about {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin: 3rem 0;
-}
-.about h2 {
-  width: 30%;
-}
-.about p {
-  width: 70%;
+.flicker-slow {
+  -webkit-animation: flicker 3s linear infinite;
+          animation: flicker 3s linear infinite;
 }
 
-.gallerySec {
-  width: 60%;
-  margin: auto;
-  overflow: hidden;
-  position: relative;
+@-webkit-keyframes flicker {
+  0%, 19.999%, 22%, 62.999%, 64%, 64.999%, 70%, 100% {
+    opacity: 0.99;
+  }
+  20%, 21.999%, 63%, 63.999%, 65%, 69.999% {
+    opacity: 0.4;
+  }
 }
-.gallerySec .gallery {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%;
-  height: 500px;
-  position: relative;
+
+@keyframes flicker {
+  0%, 19.999%, 22%, 62.999%, 64%, 64.999%, 70%, 100% {
+    opacity: 0.99;
+  }
+  20%, 21.999%, 63%, 63.999%, 65%, 69.999% {
+    opacity: 0.4;
+  }
 }
-.gallerySec .prevBtn {
-  position: absolute;
-  top: 50%;
-  z-index: 10;
-  left: 5%;
-  font-size: 1.5rem;
-  color: white;
-  cursor: pointer;
-}
-.gallerySec .nextBtn {
-  position: absolute;
-  top: 50%;
-  z-index: 10;
-  right: 5%;
-  font-size: 1.5rem;
-  color: white;
-  cursor: pointer;
+span {
+  display: block;
 }
 
 @media (max-width: 480px) {
   body {
     background: none;
+  }
+
+  h2 {
+    margin: 0;
   }
 
   .logo {

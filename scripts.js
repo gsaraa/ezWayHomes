@@ -1,62 +1,70 @@
-const carouselSlide = document.querySelector('.gallery');
-const carouselImages = document.querySelectorAll('.gallery img');
+// const carouselSlide = document.querySelector('.gallery');
+// const carouselImages = document.querySelectorAll('.gallery img');
 
-// Button
-const prevBtn = document.querySelector('#prev');
-const nextBtn = document.querySelector('#next');
+// // Button
+// const prevBtn = document.querySelector('#prev');
+// const nextBtn = document.querySelector('#next');
 
-// Counter
-let counter = 1;
-const size = carouselImages[0].clientWidth;
+// // Counter
+// let counter = 1;
+// const size = carouselImages[0].clientWidth;
 
-carouselSlide.style.transform = 'translateX(' + (-size * counter ) + 'px)';
+// const galleryItems = document.querySelectorAll('.galleryImg');
 
-// Button Listeners
+// const galleryImg = function() {
+//     prevBtn.addEventListener('click', function() {
+//         if ()
+//     })
+// }
 
-nextBtn.addEventListener('click', function() {
-    if (counter >= carouselImages.length - 1) return;
-    carouselSlide.style.transition = "transform 0.4s ease-in-out";
+// carouselSlide.style.transform = 'translateX(' + (-size * counter ) + 'px)';
 
-    counter++;
+// // Button Listeners
 
-    carouselSlide.style.transform = 'translateX(' + (-size * counter ) + 'px)';
-    // console.log(counter);
-});
+// nextBtn.addEventListener('click', function() {
+//     if (counter >= carouselImages.length - 1) return;
+//     carouselSlide.style.transition = "transform 0.4s ease-in-out";
 
-prevBtn.addEventListener('click', function() {
-    if (counter <= 0) return;
-    carouselSlide.style.transition = "transform 0.4s ease-in-out";
+//     counter++;
 
-    counter--;
+//     carouselSlide.style.transform = 'translateX(' + (-size * counter ) + 'px)';
+//     // console.log(counter);
+// });
 
-    carouselSlide.style.transform = 'translateX(' + (-size * counter ) + 'px)';
-    // console.log(counter);
-});
+// prevBtn.addEventListener('click', function() {
+//     if (counter <= 0) return;
+//     carouselSlide.style.transition = "transform 0.4s ease-in-out";
 
-carouselSlide.addEventListener('transitionend', function() {
-    // console.log(carouselImages[counter]);
-    if (carouselImages[counter].id === 'lastClone') {
+//     counter--;
 
-        carouselSlide.style.transition = 'none';
+//     carouselSlide.style.transform = 'translateX(' + (-size * counter ) + 'px)';
+//     // console.log(counter);
+// });
 
-        counter = carouselImages.length - 2;
+// carouselSlide.addEventListener('transitionend', function() {
+//     // console.log(carouselImages[counter]);
+//     if (carouselImages[counter].id === 'lastClone') {
 
-        carouselSlide.style.transform = 'translateX(' + (-size * counter ) + 'px)';
+//         carouselSlide.style.transition = 'none';
 
-        // console.log('none');
-    }
+//         counter = carouselImages.length - 2;
 
-    if (carouselImages[counter].id === 'firstClone') {
+//         carouselSlide.style.transform = 'translateX(' + (-size * counter ) + 'px)';
 
-        carouselSlide.style.transition = 'none';
+//         // console.log('none');
+//     }
 
-        counter = carouselImages.length - counter;
+//     if (carouselImages[counter].id === 'firstClone') {
 
-        carouselSlide.style.transform = 'translateX(' + (-size * counter ) + 'px)';
+//         carouselSlide.style.transition = 'none';
 
-        // console.log('none');
-    }
-})
+//         counter = carouselImages.length - counter;
+
+//         carouselSlide.style.transform = 'translateX(' + (-size * counter ) + 'px)';
+
+//         // console.log('none');
+//     }
+// })
 
 
 AOS.init();
