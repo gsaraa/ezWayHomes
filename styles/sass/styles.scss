@@ -39,17 +39,25 @@ img {
 
 header {
     height: 100vh;
-    background-image: url(../assets/background.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: right;
+    position: relative;
+    // background-image: url(../assets/background.jpg);
+    // background-repeat: no-repeat;
+    // background-size: cover;
+    // background-position: right;
+
+    .headerBackground {
+        opacity: 0.3;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+    }
 }
 
 // .layer {
-//     height: ;
+//     // height: ;
 //     background-color: black;
 //     opacity: 0.3;
-    
 // }
 
 // h2 {
@@ -113,7 +121,7 @@ nav {
     justify-content: space-between;
 }
 
-.about {
+.aboutSection {
     display: flex;
     margin: 3rem 0;
 
@@ -246,12 +254,6 @@ nav {
         padding: .5rem 0;
     }
 }
-
-
-
-
-
-
 
 
 // ======================= Media Queries

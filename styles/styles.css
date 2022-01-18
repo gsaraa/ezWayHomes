@@ -269,10 +269,14 @@ img {
 
 header {
   height: 100vh;
-  background-image: url(../assets/background.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: right;
+  position: relative;
+}
+header .headerBackground {
+  opacity: 0.3;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
 }
 
 nav {
@@ -304,16 +308,16 @@ nav a {
           justify-content: space-between;
 }
 
-.about {
+.aboutSection {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   margin: 3rem 0;
 }
-.about h2 {
+.aboutSection h2 {
   width: 30%;
 }
-.about p {
+.aboutSection p {
   width: 70%;
 }
 
