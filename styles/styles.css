@@ -366,6 +366,38 @@ nav a {
   font-size: 2rem;
 }
 
+.contactSection {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 4rem auto;
+}
+
+.formText {
+  width: 40%;
+  text-align: left;
+}
+.formText h3 {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+}
+.formText .contactInfo {
+  margin-top: 6rem;
+}
+.formText .contactInfo .phone, .formText .contactInfo .instagram, .formText .contactInfo .companyEmail {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 2rem;
+  text-align: bottom;
+}
+.formText .contactInfo .phone i, .formText .contactInfo .instagram i, .formText .contactInfo .companyEmail i {
+  font-size: 1.5rem;
+}
+.formText .contactInfo .phone p, .formText .contactInfo .instagram p, .formText .contactInfo .companyEmail p {
+  margin: 0 1rem;
+}
+
 .formSection {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -374,7 +406,10 @@ nav a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 0 15rem;
+  width: 60%;
+  background: floralwhite;
+  margin-left: 3rem;
+  padding: 2rem;
 }
 .formSection input, .formSection textarea, .formSection button {
   margin: 10px 0;
@@ -385,6 +420,14 @@ nav a {
 .formSection textarea {
   resize: none;
   height: 20rem;
+}
+.formSection button {
+  font-family: "Playfair Display", serif;
+  text-transform: uppercase;
+  color: #592603;
+  background: none;
+  border: 1px solid #592603;
+  padding: 0.5rem 0;
 }
 
 @media (max-width: 480px) {
