@@ -235,22 +235,31 @@ html {
   overflow: hidden;
 }
 
+body {
+  font-size: 125%;
+  line-height: 1.75;
+  text-align: center;
+  background-color: whitesmoke;
+  font-family: "Playfair Display", serif;
+  color: #592603;
+  padding: 0;
+}
+
 .wrapper {
   width: 90%;
   margin: 0 auto;
   max-width: 1200px;
 }
 
-body {
-  font-size: 125%;
-  line-height: 1.75;
-  text-align: center;
-  background: url(../assets/ezWayHomesLogo.png);
-  background-size: contain;
-  background-repeat: repeat;
-  font-family: "Playfair Display", serif;
-  color: #592603;
+ul {
+  margin: 0;
   padding: 0;
+  list-style: none;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
 }
 
 img {
@@ -259,59 +268,177 @@ img {
      object-fit: cover;
 }
 
+header {
+  height: 100vh;
+  position: relative;
+}
+header .headerBackground {
+  width: 100vw;
+  height: 100%;
+  opacity: 0.3;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-top: 3rem;
+  font-family: "Roboto", sans-serif;
+}
+nav a {
+  text-transform: uppercase;
+  color: #592603;
+}
+
 .logo {
+  width: 10rem;
+}
+
+.navLinks {
+  width: 70%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.aboutSection {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 3rem 0;
+}
+.aboutSection h2 {
+  width: 30%;
+}
+.aboutSection p {
+  width: 70%;
+}
+
+.gallerySec {
+  width: 60%;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+}
+.gallerySec .gallery {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 500px;
+  position: relative;
+}
+.gallerySec .gallery .galleryImg {
   display: none;
-  width: 14rem;
-  margin: 0 auto;
-  padding: 2rem 0;
 }
-
-h2 {
-  font-size: 3rem;
-  text-transform: capitalize;
-  background-color: whitesmoke;
-  border-radius: 1rem;
-  margin: 45vh 30% 0 30%;
-  font-family: "Raleway", sans-serif;
-  color: #7c4905;
-  font-weight: 400;
-  letter-spacing: 8px;
-  text-shadow: 1px 0px 4px #7c4905, 2px 0px 4px #7c4905, 3px 0px 4px #7c4905, 2px 0px 3px #583302, 2px 3px 15px #583302, 2px 0px 15px, 5px 0px 125px, 20px 0vw 200px #583302, 40px 0vw 200px #583302;
-}
-
-.flicker-slow {
-  -webkit-animation: flicker 3s linear infinite;
-          animation: flicker 3s linear infinite;
-}
-
-@-webkit-keyframes flicker {
-  0%, 19.999%, 22%, 62.999%, 64%, 64.999%, 70%, 100% {
-    opacity: 0.99;
-  }
-  20%, 21.999%, 63%, 63.999%, 65%, 69.999% {
-    opacity: 0.4;
-  }
-}
-
-@keyframes flicker {
-  0%, 19.999%, 22%, 62.999%, 64%, 64.999%, 70%, 100% {
-    opacity: 0.99;
-  }
-  20%, 21.999%, 63%, 63.999%, 65%, 69.999% {
-    opacity: 0.4;
-  }
-}
-span {
+.gallerySec .gallery .show {
   display: block;
+}
+.gallerySec .gallery img {
+  width: 100%;
+}
+.gallerySec .prevBtn {
+  position: absolute;
+  top: 50%;
+  z-index: 10;
+  left: 5%;
+  font-size: 1.5rem;
+  color: white;
+  cursor: pointer;
+}
+.gallerySec .prevBtn:hover {
+  font-size: 2rem;
+}
+.gallerySec .nextBtn {
+  position: absolute;
+  top: 50%;
+  z-index: 10;
+  right: 5%;
+  font-size: 1.5rem;
+  color: white;
+  cursor: pointer;
+}
+.gallerySec .nextBtn:hover {
+  font-size: 2rem;
+}
+
+.contactSection {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 4rem auto;
+}
+
+.formText {
+  width: 40%;
+  text-align: left;
+}
+.formText h3 {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+}
+.formText .contactInfo {
+  margin-top: 6rem;
+}
+.formText .contactInfo .phone, .formText .contactInfo .instagram, .formText .contactInfo .companyEmail {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 2rem;
+  text-align: bottom;
+}
+.formText .contactInfo .phone i, .formText .contactInfo .instagram i, .formText .contactInfo .companyEmail i {
+  font-size: 1.5rem;
+}
+.formText .contactInfo .phone p, .formText .contactInfo .instagram p, .formText .contactInfo .companyEmail p {
+  margin: 0 1rem;
+}
+
+.formSection {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 60%;
+  background: lightslategray;
+  margin-left: 3rem;
+  padding: 2rem;
+}
+.formSection input, .formSection textarea, .formSection button {
+  margin: 10px 0;
+}
+.formSection input {
+  height: 2.5rem;
+}
+.formSection textarea {
+  resize: none;
+  height: 18rem;
+}
+.formSection button {
+  font-family: "Playfair Display", serif;
+  text-transform: uppercase;
+  color: #592603;
+  background: none;
+  border: 1px solid #592603;
+  padding: 0.5rem 0;
 }
 
 @media (max-width: 480px) {
   body {
     background: none;
-  }
-
-  h2 {
-    margin: 0;
   }
 
   .logo {

@@ -20,44 +20,46 @@
     <title>EZ Way Homes</title>
 </head>
 <body>
-    <!-- <header> -->
-        <!-- <div class="layer"> -->
+    <header>
+        <div class="layer">
 
-            <!-- <div class="wrapper">
+            <img src="./assets/background.jpg" alt="" class="headerBackground">
+
+            <div class="wrapper">
     
                 <nav>
 
-                    <div class="logo" data-aos="fade-down">
+                    <div class="logo" data-aos="fade-right">
                         <a href="#"><img src="./assets/ezWayHomesLogo.png" alt=""></a>
-                    </div> -->
+                    </div>
         
-                    <!-- <ul class="navLinks" data-aos="fade-down">
+                    <ul class="navLinks" data-aos="fade-left">
                         <li><a href="#">Home</a></li>
-                        <li><a href="">About Us</a></li>
-                        <li><a href="">Contact Us</a></li>
-                        <li><a href="">Gallery</a></li>
-                    </ul> -->
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#contact">Contact Us</a></li>
+                    </ul>
 
-                <!-- </nav> -->
+                </nav>
 
-                <!-- </div> -->
-                <!-- <h1>
+                </div>
+                <h1>
                     EZ Way Homes
                 </h1>
-                <h2 data-aos="fade-up-right">
+                <!-- <h2 data-aos="fade-up-right">
                     Website Coming Soon <span class="flicker-slow">Stay tuned...</span> 
                     Let us build your dream home...
                 </h2> -->
 
                 
 
-            <!-- </div> -->
+            </div>
 
-    <!-- </header> -->
+    </header>
 
-    <!-- <main>
+    <main>
         <div class="wrapper">
-            <section class="about">
+            <section class="aboutSection" id="about">
                 <h2 data-aos="fade-right">
                     About Us
                 </h2>
@@ -68,7 +70,7 @@
             </section>
         </div>
             
-            <section class="gallerySec">
+            <section class="gallerySec" id="gallery">
 
                 <h2>See Some of Our Work</h2>
 
@@ -95,8 +97,8 @@
                     </div>
                     <div class="galleryImg" data-img-num="6">
                         <img id="firstClone" src="./assets/img1.png" alt="">
-                    </div> -->
-                    <!-- <div class="galleryImg4Clone">
+                    </div>
+                    <div class="galleryImg4Clone">
                         <img id="lastClone" src="./assets/img4.png" alt="">
                     </div>
                     <div class="galleryImg1">
@@ -113,41 +115,65 @@
                     </div>
                     <div class="galleryImg1Clone">
                         <img id="firstClone" src="./assets/img1.png" alt="">
-                    </div> -->
-                <!-- </div> -->
+                    </div>
+                </div>
 
-            <!-- </section>
+            </section>
 
-        <section>
-            <form action="">
+            <section class="wrapper contactSection" id="contact">
+                <div class="formText" data-aos="fade-right">
+                    <h3>
+                        Get In touch
+                    </h3>
 
-            </form>
+                    <p>
+                        Feel free to contact us for a free estimate
+                    </p>
+
+                    <div class="contactInfo">
+
+                        <div class="phone">
+                            <i class="fas fa-phone"></i>
+                            <p>(123) 456-7890 </p>
+                        </div>
+    
+                        <div class="instagram">
+                            <i class="fab fa-instagram"></i>
+                            <p>Instagram</p>
+                        </div>
+    
+                        <div class="companyEmail">
+                            <i class="far fa-envelope"></i>
+                            <p>info@ezwayhomes.ca</p>
+                        </div>
+                        
+                    </div>
+                </div>
+
+                <form action="https://formspree.io/f/mrgjelrj" method="POST" class="formSection" data-aos="fade-left">
+                    <label for="username">Name</label>
+                    <input type="text" id="name" name="name">
+
+                    <label>E-mail</label>
+                    <input type="email" name="_replyto">
+                
+                    <label>Message</label>
+                    <textarea name="message"></textarea>
+                    
+                    <button type="submit">Send</button>
+                </form>
+            
         </section>
-    </main> -->
-    <!-- <footer> -->
-        
-    <!-- </footer> -->
-
-    <!-- <script src="https://unpkg.com/aos@next/dist/aos.js"></script> -->
-    <!-- <script src="./scripts.js"></script> -->
-
-    <header>
-        <div class="logo">
-            <a href="#"><img src="./assets/ezWayHomesLogo.png" alt=""></a>
-        </div>
-        <!-- <h1>
-            EZ Way Homes
-        </h1> -->
-        <h2>
-            Website Coming Soon <span class="flicker-slow">Stay tuned...</span> 
-        </h2>
-    </header>
-    <main>
-
     </main>
-    <footer>
 
+    
+    
+    <footer>
+        2022 © EZ Way Homes 
     </footer>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="./scripts.js"></script>
 </body>
 </html>
 
