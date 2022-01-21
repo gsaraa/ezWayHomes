@@ -249,6 +249,9 @@ body {
   width: 90%;
   margin: 0 auto;
   max-width: 1200px;
+  overflow: hidden;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 ul {
@@ -325,51 +328,77 @@ nav a {
 }
 
 .gallerySec {
-  width: 60%;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+.gallerySec .galleryImg {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
   margin: auto;
-  overflow: hidden;
+  padding: 1rem 4rem;
+  z-index: 100;
+  -webkit-transition: opacity 0.5s, z-index 0.5s, -webkit-transform 0.5s;
+  transition: opacity 0.5s, z-index 0.5s, -webkit-transform 0.5s;
+  transition: transform 0.5s, opacity 0.5s, z-index 0.5s;
+  transition: transform 0.5s, opacity 0.5s, z-index 0.5s, -webkit-transform 0.5s;
+}
+.gallerySec .galleryImg.first,
+.gallerySec .galleryImg.active {
+  opacity: 1;
   position: relative;
+  z-index: 900;
 }
-.gallerySec .gallery {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%;
-  height: 500px;
-  position: relative;
+.gallerySec .galleryImg.prev,
+.gallerySec .galleryImg.next {
+  z-index: 800;
 }
-.gallerySec .gallery .galleryImg {
-  display: none;
+.gallerySec .galleryImg.prev {
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
 }
-.gallerySec .gallery .show {
-  display: block;
+.gallerySec .galleryImg.next {
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
 }
-.gallerySec .gallery img {
-  width: 100%;
-}
-.gallerySec .prevBtn {
+.gallerySec .button--prev,
+.gallerySec .button--next {
   position: absolute;
   top: 50%;
-  z-index: 10;
-  left: 5%;
-  font-size: 1.5rem;
-  color: white;
+  width: 3rem;
+  height: 3rem;
+  background-color: #fff;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  border-radius: 50%;
   cursor: pointer;
+  z-index: 1001;
+  border: 1px solid slategray;
 }
-.gallerySec .prevBtn:hover {
-  font-size: 2rem;
+.gallerySec .button--prev {
+  left: 0;
 }
-.gallerySec .nextBtn {
+.gallerySec .button--next {
+  right: 0;
+}
+.gallerySec .button--prev::after,
+.gallerySec .button--next::after {
+  content: "";
   position: absolute;
+  width: 10px;
+  height: 10px;
   top: 50%;
-  z-index: 10;
-  right: 5%;
-  font-size: 1.5rem;
-  color: white;
-  cursor: pointer;
+  left: 54%;
+  border-right: 2px solid slategray;
+  border-bottom: 2px solid slategray;
+  -webkit-transform: translate(-50%, -50%) rotate(135deg);
+          transform: translate(-50%, -50%) rotate(135deg);
 }
-.gallerySec .nextBtn:hover {
-  font-size: 2rem;
+.gallerySec .button--next::after {
+  left: 47%;
+  -webkit-transform: translate(-50%, -50%) rotate(-45deg);
+          transform: translate(-50%, -50%) rotate(-45deg);
 }
 
 .contactSection {

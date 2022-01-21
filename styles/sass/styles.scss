@@ -20,6 +20,8 @@ body {
     width: 90%;
     margin: 0 auto;
     max-width: 1200px;
+    overflow: hidden;
+    box-sizing: border-box;
 }
 
 ul {
@@ -139,58 +141,131 @@ nav {
 
 // ======================== Image Carousel needs work
 .gallerySec {
-    width: 60%;
-    margin: auto;
-    overflow: hidden;
+    // width: 60%;
+    // margin: auto;
+    // overflow: hidden;
     // border: 5px solid black;
-    position: relative;
+    // position: relative;
+    transform-style: preserve-3d;
 
-    .gallery {
-        display: flex;
+    .galleryImg {
+        opacity: 0;
+        position: absolute;
+        top: 0;
         width: 100%;
-        height: 500px;
+        margin: auto;
+        padding: 1rem 4rem;
+        z-index: 100;
+        transition: transform .5s, opacity .5s, z-index .5s;
+    }
+
+    .galleryImg.first,
+    .galleryImg.active {
+        opacity: 1;
         position: relative;
-
-        .galleryImg {
-            display: none;
-        }
-
-        .show {
-            display: block;
-        }
-
-        img {
-            width: 100%;
-        }
+        z-index: 900;
     }
 
-    .prevBtn {
+    .galleryImg.prev,
+    .galleryImg.next {
+        z-index: 800;
+    }
+
+    .galleryImg.prev {
+        transform: translateX(-100%);
+        //Move prev item to the left
+    }
+
+    .galleryImg.next {
+        transform: translateX(100%);
+        //Move next item to the right
+    }
+    
+    .button--prev,
+    .button--next {
         position: absolute;
         top: 50%;
-        z-index: 10;
-        left: 5%;
-        font-size: 1.5rem;
-        color: white;
+        width: 3rem;
+        height: 3rem;
+        background-color: #fff;
+        transform: translateY(-50%);
+        border-radius: 50%;
         cursor: pointer;
+        z-index: 1001; //Sits on top
+        border: 1px solid slategray;
     }
 
-    .prevBtn:hover {
-        font-size: 2rem;
+    .button--prev {
+        left: 0;
     }
 
-    .nextBtn {
+    .button--next {
+        right: 0;
+    }
+
+    .button--prev::after,
+    .button--next::after {
+        content: "";
         position: absolute;
+        width: 10px;
+        height: 10px;
         top: 50%;
-        z-index: 10;
-        right: 5%;
-        font-size: 1.5rem;
-        color: white;
-        cursor: pointer;
+        left: 54%;
+        border-right: 2px solid slategray;
+        border-bottom: 2px solid slategray;
+        transform: translate(-50%, -50%) rotate(135deg);
     }
 
-    .nextBtn:hover {
-        font-size: 2rem;
+    .button--next::after {
+        left: 47%;
+        transform: translate(-50%, -50%) rotate(-45deg);
     }
+    // .gallery {
+    //     display: flex;
+    //     width: 100%;
+    //     height: 500px;
+    //     position: relative;
+
+    //     .galleryImg {
+    //         display: none;
+    //     }
+
+    //     .show {
+    //         display: block;
+    //     }
+
+    //     img {
+    //         width: 100%;
+    //     }
+    // }
+
+    // .prevBtn {
+    //     position: absolute;
+    //     top: 50%;
+    //     z-index: 10;
+    //     left: 5%;
+    //     font-size: 1.5rem;
+    //     color: white;
+    //     cursor: pointer;
+    // }
+
+    // .prevBtn:hover {
+    //     font-size: 2rem;
+    // }
+
+    // .nextBtn {
+    //     position: absolute;
+    //     top: 50%;
+    //     z-index: 10;
+    //     right: 5%;
+    //     font-size: 1.5rem;
+    //     color: white;
+    //     cursor: pointer;
+    // }
+
+    // .nextBtn:hover {
+    //     font-size: 2rem;
+    // }
 }
 
 // ====================== Image Carousel ends here
