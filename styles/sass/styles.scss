@@ -7,6 +7,7 @@ body {
     font-size: 125%;
     line-height: 1.75;
     text-align: center;
+    background-color: whitesmoke;
     // background: url(../assets/ezWayHomesLogo.png);
     // background-size: contain;
     // background-repeat: repeat;
@@ -46,6 +47,8 @@ header {
     // background-position: right;
 
     .headerBackground {
+        width: 100vw;
+        height: 100%;
         opacity: 0.3;
         position: absolute;
         top: 0;
@@ -139,7 +142,7 @@ nav {
     width: 60%;
     margin: auto;
     overflow: hidden;
-    border: 5px solid black;
+    // border: 5px solid black;
     position: relative;
 
     .gallery {
@@ -229,7 +232,7 @@ nav {
     display: flex;
     flex-direction: column;
     width: 60%;
-    background: floralwhite;
+    background: lightslategray;
     margin-left: 3rem;
     padding: 2rem;
 
@@ -242,7 +245,7 @@ nav {
     }
     textarea { 
         resize: none;
-        height: 20rem;
+        height: 18rem;
     }
 
     button {

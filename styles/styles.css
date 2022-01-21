@@ -239,6 +239,7 @@ body {
   font-size: 125%;
   line-height: 1.75;
   text-align: center;
+  background-color: whitesmoke;
   font-family: "Playfair Display", serif;
   color: #592603;
   padding: 0;
@@ -272,6 +273,8 @@ header {
   position: relative;
 }
 header .headerBackground {
+  width: 100vw;
+  height: 100%;
   opacity: 0.3;
   position: absolute;
   top: 0;
@@ -325,7 +328,6 @@ nav a {
   width: 60%;
   margin: auto;
   overflow: hidden;
-  border: 5px solid black;
   position: relative;
 }
 .gallerySec .gallery {
@@ -411,7 +413,7 @@ nav a {
       -ms-flex-direction: column;
           flex-direction: column;
   width: 60%;
-  background: floralwhite;
+  background: lightslategray;
   margin-left: 3rem;
   padding: 2rem;
 }
@@ -423,7 +425,7 @@ nav a {
 }
 .formSection textarea {
   resize: none;
-  height: 20rem;
+  height: 18rem;
 }
 .formSection button {
   font-family: "Playfair Display", serif;
