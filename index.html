@@ -65,17 +65,31 @@
             
             <section class="gallerySec">
 
-                    <i id="prev" class="fas fa-arrow-left prevBtn"></i>
+                <div class="carousel" data-carousel>
+
+                    <button class="carouselButton prev" data-carouselButton="prev">&#8592;</button>
+
+                    <button class="carouselButton next" data-carouselButton="next">&#8594;</button>
                     
-                    <i id="next" class="fas fa-arrow-right nextBtn"></i>
-                    
-                <div class="gallery">
-                    <img id="lastClone" src="./assets/img4.png" alt="">
-                    <img src="./assets/img1.png" alt="">
-                    <img src="./assets/img2.png" alt="">
-                    <img src="./assets/img3.png" alt="">
-                    <img src="./assets/img4.png" alt="">
-                    <img id="firstClone" src="./assets/img1.png" alt="">
+                    <ul data-slides>
+                        <li class="slide" data-active>
+                            <img src="./assets/img1.png" alt="">
+                        </li>
+
+                        <li class="slide">
+                            <img src="./assets/img2.png" alt="">
+                        </li>
+                        
+                        <li class="slide">
+                            <img src="./assets/img3.png" alt="">
+                        </li>
+                        
+                        <li class="slide">
+                            <img src="./assets/img4.png" alt="">
+                        </li>
+
+                    </ul>
+
                 </div>
 
             </section>

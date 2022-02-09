@@ -1,62 +1,23 @@
-const carouselSlide = document.querySelector('.gallery');
-const carouselImages = document.querySelectorAll('.gallery img');
+const buttons = document.querySelectorAll('[data-carouselButton]')
 
-// Button
-const prevBtn = document.querySelector('#prev');
-const nextBtn = document.querySelector('#next');
+buttons.forEach(function (button) {
+    button.addEventListener('click', function () {
+        const offset = button.dataset.carouselButton === 'next' ? 1 : -1
 
-// Counter
-let counter = 1;
-const size = carouselImages[0].clientWidth;
+        const slides = button
+        .closest('[data-carousel]')
+        .querySelector('[data-slides]')
 
-carouselSlide.style.transform = 'translateX(' + (-size * counter ) + 'px)';
+        const activeSlide = slides.querySelector('[data-active]')
 
-// Button Listeners
+        let newIndex = [...slides.children].indexOf(activeSlide) + offset
+        
+        if (newIndex < 0) newIndex = slides.children.length - 1
+        if (newIndex >= slides.children.length) newIndex = 0
 
-nextBtn.addEventListener('click', function() {
-    if (counter >= carouselImages.length - 1) return;
-    carouselSlide.style.transition = "transform 0.4s ease-in-out";
-
-    counter++;
-
-    carouselSlide.style.transform = 'translateX(' + (-size * counter ) + 'px)';
-    // console.log(counter);
-});
-
-prevBtn.addEventListener('click', function() {
-    if (counter <= 0) return;
-    carouselSlide.style.transition = "transform 0.4s ease-in-out";
-
-    counter--;
-
-    carouselSlide.style.transform = 'translateX(' + (-size * counter ) + 'px)';
-    // console.log(counter);
-});
-
-carouselSlide.addEventListener('transitionend', function() {
-    // console.log(carouselImages[counter]);
-    if (carouselImages[counter].id === 'lastClone') {
-
-        carouselSlide.style.transition = 'none';
-
-        counter = carouselImages.length - 2;
-
-        carouselSlide.style.transform = 'translateX(' + (-size * counter ) + 'px)';
-
-        // console.log('none');
-    }
-
-    if (carouselImages[counter].id === 'firstClone') {
-
-        carouselSlide.style.transition = 'none';
-
-        counter = carouselImages.length - counter;
-
-        carouselSlide.style.transform = 'translateX(' + (-size * counter ) + 'px)';
-
-        // console.log('none');
-    }
+        slides.children[newIndex].dataset.active = true
+        delete activeSlide.dataset.active
+    })
 })
-
 
 AOS.init();
