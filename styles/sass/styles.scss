@@ -59,6 +59,7 @@ nav {
     justify-content: space-between;
     padding-top: 3rem;
     font-family: 'Roboto', sans-serif;
+    // height: 15vh;
 
     a {
         text-transform: uppercase;
@@ -76,7 +77,7 @@ nav {
     justify-content: space-between;
 }
 
-.about {
+.aboutSection {
     display: flex;
     margin: 3rem 0;
 
@@ -221,6 +222,73 @@ footer {
     padding: 1rem 0;
 }
 
+// ====================== Image Carousel ends here
+.contactSection {
+    display: flex;
+    margin: 4rem auto;
+}
+
+.formText {
+    width: 40%;
+    text-align: left;
+
+    h3 {
+        font-size: 2.5rem;
+        text-transform: uppercase;
+    }
+
+    .contactInfo {
+        margin-top: 6rem;
+
+        .phone, .instagram, .companyEmail {
+            display: flex;
+            margin-top: 2rem;
+            text-align: bottom;
+    
+            i {
+                font-size: 1.5rem;
+            }
+    
+            p {
+                margin: 0 1rem;
+                
+            }
+        }
+    }
+}
+
+.formSection {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    background: lightslategray;
+    margin-left: 3rem;
+    padding: 2rem;
+
+    input, textarea, button {
+        margin: 10px 0;
+    }
+    
+    input {
+        height: 2.5rem;
+    }
+    textarea { 
+        resize: none;
+        height: 18rem;
+    }
+
+    button {
+        font-family: 'Playfair Display', serif;
+        text-transform: uppercase;
+        color: #592603;
+        background: none;
+        border: 1px solid #592603;
+        padding: .5rem 0;
+    }
+}
+
+
+// ======================= Media Queries
 @media (max-width: 480px) {
     body {
         background: none;
@@ -234,3 +302,76 @@ footer {
         display: block;
     }
 }
+
+
+// ============================= LANDING PAGE
+// body {
+//     font-size: 125%;
+//     line-height: 1.75;
+//     text-align: center;
+//     background: url(../assets/ezWayHomesLogo.png);
+//     background-size: contain;
+//     background-repeat: repeat;
+//     font-family: 'Playfair Display', serif;
+//     color: #592603;
+//     padding: 0;
+// }
+
+// img {
+//     max-width: 100%;
+//     object-fit: cover;
+// }
+
+// .logo {
+//     display: none;
+//     width: 14rem;
+//     margin: 0 auto;
+//     padding: 2rem 0;
+// }
+
+// h2 {
+//     font-size: 3rem;
+//     text-transform: capitalize;
+//     background-color: whitesmoke;
+//     border-radius: 1rem;
+//     margin: 45vh 30% 0 30%;
+//     font-family: 'Raleway', sans-serif;
+//     color: #7c4905;
+//     font-weight: 400;
+//     letter-spacing: 8px;
+//     text-shadow: 1px 0px 4px #7c4905, 2px 0px 4px #7c4905, 3px 0px 4px #7c4905, 2px 0px 3px #583302, 2px 3px 15px #583302, 2px 0px 15px, 5px 0px 125px, 20px 0vw 200px #583302,40px 0vw 200px #583302;
+// }
+
+// .flicker-slow{
+//     animation: flicker 3s linear infinite;
+// }
+
+
+// @keyframes flicker {
+//     0%, 19.999%, 22%, 62.999%, 64%, 64.999%, 70%, 100% {
+//     opacity: .99;
+//     }
+
+//     20%, 21.999%, 63%, 63.999%, 65%, 69.999% {
+//         opacity: 0.4;
+//     }
+// }
+
+
+// span {
+//     display: block;
+// }
+
+// @media (max-width: 480px) {
+//     body {
+//         background: none;
+//     }
+
+//     h2 {
+//         margin: 0;
+//     }
+
+//     .logo {
+//         display: block;
+//     }
+// } 
