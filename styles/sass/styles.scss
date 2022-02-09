@@ -124,6 +124,7 @@ nav {
     }
 }
 
+// ======================== GALLERY SECTION STYLES
 .gallerySec {
     
     .carousel {
@@ -184,6 +185,75 @@ nav {
             right: 1rem;
         }
     }
+}
+
+// ======================== FORM SECTION STYLES
+.contactSection {
+    display: flex;
+    margin: 4rem auto;
+}
+
+.formText {
+    width: 40%;
+    text-align: left;
+
+    h3 {
+        font-size: 2.5rem;
+        text-transform: uppercase;
+    }
+
+    .contactInfo {
+        margin-top: 6rem;
+
+        .phone, .instagram, .companyEmail {
+            display: flex;
+            margin-top: 2rem;
+            text-align: bottom;
+    
+            i {
+                font-size: 1.5rem;
+            }
+    
+            p {
+                margin: 0 1rem;
+                
+            }
+        }
+    }
+}
+
+.formSection {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    background: lightslategray;
+    margin-left: 3rem;
+    padding: 2rem;
+
+    input, textarea, button {
+        margin: 10px 0;
+    }
+    
+    input {
+        height: 2.5rem;
+    }
+    textarea { 
+        resize: none;
+        height: 18rem;
+    }
+
+    button {
+        font-family: 'Playfair Display', serif;
+        text-transform: uppercase;
+        color: #592603;
+        background: none;
+        border: 1px solid #592603;
+        padding: .5rem 0;
+    }
+}
+
+footer {
+    text-align: center;
 }
 
 @media (max-width: 480px) {
