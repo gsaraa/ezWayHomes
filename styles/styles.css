@@ -327,78 +327,60 @@ nav a {
   width: 70%;
 }
 
-.gallerySec {
-  -webkit-transform-style: preserve-3d;
-          transform-style: preserve-3d;
-}
-.gallerySec .galleryImg {
-  opacity: 0;
-  position: absolute;
-  top: 0;
-  width: 100%;
-  margin: auto;
-  padding: 1rem 4rem;
-  z-index: 100;
-  -webkit-transition: opacity 0.5s, z-index 0.5s, -webkit-transform 0.5s;
-  transition: opacity 0.5s, z-index 0.5s, -webkit-transform 0.5s;
-  transition: transform 0.5s, opacity 0.5s, z-index 0.5s;
-  transition: transform 0.5s, opacity 0.5s, z-index 0.5s, -webkit-transform 0.5s;
-}
-.gallerySec .galleryImg.first,
-.gallerySec .galleryImg.active {
-  opacity: 1;
+.gallerySec .carousel {
+  height: 40rem;
   position: relative;
-  z-index: 900;
 }
-.gallerySec .galleryImg.prev,
-.gallerySec .galleryImg.next {
-  z-index: 800;
-}
-.gallerySec .galleryImg.prev {
-  -webkit-transform: translateX(-100%);
-          transform: translateX(-100%);
-}
-.gallerySec .galleryImg.next {
-  -webkit-transform: translateX(100%);
-          transform: translateX(100%);
-}
-.gallerySec .button--prev,
-.gallerySec .button--next {
+.gallerySec .carousel .slide {
   position: absolute;
+  inset: 0;
+  opacity: 0;
+  -webkit-transition: 200ms opacity ease-in;
+  transition: 200ms opacity ease-in;
+  -webkit-transition-delay: 200ms;
+          transition-delay: 200ms;
+}
+.gallerySec .carousel .slide > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: center;
+     object-position: center;
+}
+.gallerySec .carousel .slide[data-active] {
+  opacity: 1;
+  z-index: 1;
+  -webkit-transition-delay: 0ms;
+          transition-delay: 0ms;
+}
+.gallerySec .carousel .carouselButton {
+  position: absolute;
+  z-index: 2;
+  background: none;
+  border: none;
+  font-size: 2rem;
   top: 50%;
-  width: 3rem;
-  height: 3rem;
-  background-color: #fff;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  border-radius: 50%;
+  color: rgba(255, 255, 255, 0.5);
   cursor: pointer;
-  z-index: 1001;
-  border: 1px solid slategray;
+  border-radius: 0.25rem;
+  padding: 0 0.5rem;
+  background: rgba(0, 0, 0, 0.1);
 }
-.gallerySec .button--prev {
-  left: 0;
+.gallerySec .carousel .carouselButton:hover,
+.gallerySec .carousel .carouselButton:focus {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.2);
 }
-.gallerySec .button--next {
-  right: 0;
+.gallerySec .carousel .carouselButton:focus {
+  outline: 1px solid black;
 }
-.gallerySec .button--prev::after,
-.gallerySec .button--next::after {
-  content: "";
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  top: 50%;
-  left: 54%;
-  border-right: 2px solid slategray;
-  border-bottom: 2px solid slategray;
-  -webkit-transform: translate(-50%, -50%) rotate(135deg);
-          transform: translate(-50%, -50%) rotate(135deg);
+.gallerySec .carousel .carouselButton.prev {
+  left: 1rem;
 }
-.gallerySec .button--next::after {
-  left: 47%;
-  -webkit-transform: translate(-50%, -50%) rotate(-45deg);
-          transform: translate(-50%, -50%) rotate(-45deg);
+.gallerySec .carousel .carouselButton.next {
+  right: 1rem;
 }
 
 .contactSection {

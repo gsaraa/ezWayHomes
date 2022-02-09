@@ -146,80 +146,80 @@ nav {
     // overflow: hidden;
     // border: 5px solid black;
     // position: relative;
-    transform-style: preserve-3d;
+    // transform-style: preserve-3d;
 
-    .galleryImg {
-        opacity: 0;
-        position: absolute;
-        top: 0;
-        width: 100%;
-        margin: auto;
-        padding: 1rem 4rem;
-        z-index: 100;
-        transition: transform .5s, opacity .5s, z-index .5s;
-    }
+    // .galleryImg {
+    //     opacity: 0;
+    //     position: absolute;
+    //     top: 0;
+    //     width: 100%;
+    //     margin: auto;
+    //     padding: 1rem 4rem;
+    //     z-index: 100;
+    //     transition: transform .5s, opacity .5s, z-index .5s;
+    // }
 
-    .galleryImg.first,
-    .galleryImg.active {
-        opacity: 1;
-        position: relative;
-        z-index: 900;
-    }
+    // .galleryImg.first,
+    // .galleryImg.active {
+    //     opacity: 1;
+    //     position: relative;
+    //     z-index: 900;
+    // }
 
-    .galleryImg.prev,
-    .galleryImg.next {
-        z-index: 800;
-    }
+    // .galleryImg.prev,
+    // .galleryImg.next {
+    //     z-index: 800;
+    // }
 
-    .galleryImg.prev {
-        transform: translateX(-100%);
-        //Move prev item to the left
-    }
+    // .galleryImg.prev {
+    //     transform: translateX(-100%);
+    //     //Move prev item to the left
+    // }
 
-    .galleryImg.next {
-        transform: translateX(100%);
-        //Move next item to the right
-    }
+    // .galleryImg.next {
+    //     transform: translateX(100%);
+    //     //Move next item to the right
+    // }
     
-    .button--prev,
-    .button--next {
-        position: absolute;
-        top: 50%;
-        width: 3rem;
-        height: 3rem;
-        background-color: #fff;
-        transform: translateY(-50%);
-        border-radius: 50%;
-        cursor: pointer;
-        z-index: 1001; //Sits on top
-        border: 1px solid slategray;
-    }
+    // .button--prev,
+    // .button--next {
+    //     position: absolute;
+    //     top: 50%;
+    //     width: 3rem;
+    //     height: 3rem;
+    //     background-color: #fff;
+    //     transform: translateY(-50%);
+    //     border-radius: 50%;
+    //     cursor: pointer;
+    //     z-index: 1001; //Sits on top
+    //     border: 1px solid slategray;
+    // }
 
-    .button--prev {
-        left: 0;
-    }
+    // .button--prev {
+    //     left: 0;
+    // }
 
-    .button--next {
-        right: 0;
-    }
+    // .button--next {
+    //     right: 0;
+    // }
 
-    .button--prev::after,
-    .button--next::after {
-        content: "";
-        position: absolute;
-        width: 10px;
-        height: 10px;
-        top: 50%;
-        left: 54%;
-        border-right: 2px solid slategray;
-        border-bottom: 2px solid slategray;
-        transform: translate(-50%, -50%) rotate(135deg);
-    }
+    // .button--prev::after,
+    // .button--next::after {
+    //     content: "";
+    //     position: absolute;
+    //     width: 10px;
+    //     height: 10px;
+    //     top: 50%;
+    //     left: 54%;
+    //     border-right: 2px solid slategray;
+    //     border-bottom: 2px solid slategray;
+    //     transform: translate(-50%, -50%) rotate(135deg);
+    // }
 
-    .button--next::after {
-        left: 47%;
-        transform: translate(-50%, -50%) rotate(-45deg);
-    }
+    // .button--next::after {
+    //     left: 47%;
+    //     transform: translate(-50%, -50%) rotate(-45deg);
+    // }
     // .gallery {
     //     display: flex;
     //     width: 100%;
@@ -266,6 +266,65 @@ nav {
     // .nextBtn:hover {
     //     font-size: 2rem;
     // }
+
+    .carousel {
+        height: 40rem;
+        position: relative;
+        
+        .slide {
+            position: absolute;
+            inset: 0;
+            opacity: 0;
+            transition: 200ms opacity ease-in;
+            transition-delay: 200ms;
+        }
+
+        .slide > img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            object-position: center;
+        }
+
+        .slide[data-active] {
+            opacity: 1;
+            z-index: 1;
+            transition-delay: 0ms;
+        }
+
+        .carouselButton {
+            position: absolute;
+            z-index: 2;
+            background: none;
+            border: none;
+            font-size: 2rem;
+            top: 50%;
+            color: rgba(255, 255, 255, .5);
+            cursor: pointer;
+            border-radius: .25rem;
+            padding: 0 .5rem;
+            background: rgba(0, 0, 0, .1);
+        }
+
+        .carouselButton:hover,
+        .carouselButton:focus {
+            color: white;
+            background-color: rgba(0, 0, 0, .2);
+        }
+
+        .carouselButton:focus {
+            outline: 1px solid black;
+        }
+
+        .carouselButton.prev {
+            left: 1rem;
+        }
+
+        .carouselButton.next {
+            right: 1rem;
+        }
+    }
 }
 
 // ====================== Image Carousel ends here
