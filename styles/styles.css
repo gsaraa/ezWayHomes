@@ -238,6 +238,7 @@ html {
 body {
   font-size: 125%;
   line-height: 1.75;
+  text-align: center;
   font-family: "Playfair Display", serif;
   color: #592603;
   padding: 0;
@@ -268,10 +269,16 @@ img {
 
 header {
   height: 100vh;
-  background-image: url(../assets/background.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: right;
+  position: relative;
+}
+header .headerBackground {
+  width: 100vw;
+  height: 100%;
+  opacity: 0.3;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
 }
 
 nav {
@@ -437,7 +444,7 @@ nav a {
 }
 
 footer {
-  text-align: center;
+  padding: 1rem 0;
 }
 
 @media (max-width: 480px) {
