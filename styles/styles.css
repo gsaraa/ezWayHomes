@@ -250,6 +250,10 @@ body {
   max-width: 1200px;
 }
 
+h2, h3, h4 {
+  font-size: 2.5rem;
+}
+
 ul {
   margin: 0;
   padding: 0;
@@ -279,6 +283,17 @@ header .headerBackground {
   top: 0;
   left: 0;
   z-index: -1;
+}
+header h1 {
+  font-weight: lighter;
+}
+header h1 span {
+  font-weight: 900;
+  text-transform: uppercase;
+}
+header h2 {
+  font-size: 1.5rem;
+  font-style: italic;
 }
 
 nav {
@@ -318,11 +333,16 @@ nav a {
 }
 .aboutSection h2 {
   width: 30%;
+  text-transform: uppercase;
 }
 .aboutSection p {
   width: 70%;
 }
 
+.gallerySec h2 {
+  text-transform: uppercase;
+  margin: 4rem 0;
+}
 .gallerySec .carousel {
   height: 40rem;
   position: relative;
@@ -391,7 +411,6 @@ nav a {
   text-align: left;
 }
 .formText h3 {
-  font-size: 2.5rem;
   text-transform: uppercase;
 }
 .formText .contactInfo {
@@ -447,76 +466,56 @@ footer {
   padding: 1rem 0;
 }
 
-.contactSection {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin: 4rem auto;
-}
-
-.formText {
-  width: 40%;
-  text-align: left;
-}
-.formText h3 {
-  font-size: 2.5rem;
-  text-transform: uppercase;
-}
-.formText .contactInfo {
-  margin-top: 6rem;
-}
-.formText .contactInfo .phone, .formText .contactInfo .instagram, .formText .contactInfo .companyEmail {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-top: 2rem;
-  text-align: bottom;
-}
-.formText .contactInfo .phone i, .formText .contactInfo .instagram i, .formText .contactInfo .companyEmail i {
-  font-size: 1.5rem;
-}
-.formText .contactInfo .phone p, .formText .contactInfo .instagram p, .formText .contactInfo .companyEmail p {
-  margin: 0 1rem;
-}
-
-.formSection {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  width: 60%;
-  background: lightslategray;
-  margin-left: 3rem;
-  padding: 2rem;
-}
-.formSection input, .formSection textarea, .formSection button {
-  margin: 10px 0;
-}
-.formSection input {
-  height: 2.5rem;
-}
-.formSection textarea {
-  resize: none;
-  height: 18rem;
-}
-.formSection button {
-  font-family: "Playfair Display", serif;
-  text-transform: uppercase;
-  color: #592603;
-  background: none;
-  border: 1px solid #592603;
-  padding: 0.5rem 0;
-}
-
 @media (max-width: 480px) {
   body {
     background: none;
   }
 
+  nav {
+    margin-bottom: 5rem;
+  }
+
   .logo {
     display: block;
+  }
+
+  .navLinks {
+    display: none;
+  }
+
+  .aboutSection {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .aboutSection h2, .aboutSection p {
+    width: 100%;
+  }
+
+  .gallerySec .carousel {
+    height: 25rem;
+  }
+  .gallerySec .carousel .carouselButton {
+    background: rgba(0, 0, 0, 0.5);
+  }
+
+  .contactSection {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .formText {
+    width: 100%;
+  }
+  .formText h3 {
+    text-align: center;
+  }
+
+  .formSection {
+    width: 100%;
+    margin: 2rem 0;
   }
 }
